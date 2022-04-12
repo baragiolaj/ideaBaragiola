@@ -136,10 +136,53 @@ h2 {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 115px 50px;
+  grid-template-rows: 115px 50px auto;
   grid-template-areas:
     "logoC social social"
-    "logoC naV naV";
+    "logoC naV naV"
+    "acor acor acor";
+}
+
+.accordion {
+  grid-area: acor;
+  display: none;
+}
+
+.accordion-body {
+  height: auto;
+  display: flex;
+  color: black;
+  justify-content: center;
+  margin: auto;
+  padding: 4%;
+}
+
+.accordion-body ul li a{
+  color: white;
+  padding: 0;
+  font-size: 3rem;
+}
+
+.accordion-body ul li {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#collapseOne {
+  background-color: #ff7600;
+}
+
+
+
+.pmenu {
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  color: black;
+  background-color: #cd113b;
+
 }
 
 .logo {
@@ -542,7 +585,7 @@ h2 {
 
 /*proyecto de carousel*/
 
-.slider {
+.sliderr {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
@@ -550,7 +593,7 @@ h2 {
   flex-wrap: wrap;
 }
 
-.slider img {
+.sliderr img {
   display: flex;
   width: 100%;
   animation: text-focus-in 2s;
@@ -580,7 +623,6 @@ h2 {
     opacity: 1;
   }
 }
-
 /* 
 .container {position: static;
             margin-top: 20px;
@@ -1135,34 +1177,72 @@ textarea {
 
 @media (min-width: 300px) and (max-width: 576px) {
   .menu {
+    height: auto;
     display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 100px 300px;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
       "social social"
       "logoC logoC"
-      "naV naV";
+      "acor acor";
   }
 
-  .welcome,
-  .h1h2 {
-    display: flexbox;
-    justify-content: center;
-    text-align: center;
+  .listaGrande {
+    display: none;
   }
 
-  .welcome p {
-    font-size: 1.7rem;
-  }
-  .logo {
-    justify-content: center;
-    height: 1px;
-  }
+.accordion {
+  margin-top: 20px;
+  display: block;
+  grid-area: acor;
+  width: 100%;
 
-  .logo img {
-    height: 80px;
-  }
+}
+
+.accordion-body {
+  width: auto;
+  height: auto;
+  display: flex;
+  color: black;
+  margin: auto;
+  padding: 8%;
+}
+
+.accordion-body ul li a{
+  color: white;
+  padding: 0;
+  font-size: 3rem;
+}
+
+.accordion-body ul li {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+}
+
+.accordion-button {
+  -webkit-animation: color-change-2x 2s linear infinite alternate both !important;
+  animation: color-change-2x 2s linear infinite alternate both !important;
+}
+
+#collapseOne {
+  background-color: #ff7600;
+  
+}
+
+
+
+.pmenu {
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  color: black;
+  -webkit-animation: color-change-2x 2s linear infinite alternate both;
+  animation: color-change-2x 2s linear infinite alternate both;
+
+}
 
   .redes2 {
     display: flex;
@@ -1208,6 +1288,10 @@ textarea {
     margin: auto;
   }
 
+  .f1 p {
+    font-size: 2.5rem;
+  }
+
   .top3img {
     display: flex;
     flex-wrap: wrap;
@@ -1236,6 +1320,7 @@ textarea {
       "ico1 ico2 ico3"
       "pa pa pa";
     margin: auto;
+    margin-top: 15px;
   }
   .sm a {
     font-size: 3rem;
@@ -1298,41 +1383,79 @@ textarea {
 
   footer {
     width: 100%;
-    height: 1200px;
+    height: 1500px;
     background-color: #ff7600;
   }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
   .menu {
+    height: auto;
     display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 100px 300px;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
       "social social"
       "logoC logoC"
-      "naV naV";
+      "acor acor";
   }
 
-  .welcome,
-  .h1h2 {
-    display: flexbox;
-    justify-content: center;
-    text-align: center;
+  .listaGrande {
+    display: none;
   }
 
-  .welcome p {
-    font-size: 1.7rem;
-  }
-  .logo {
-    justify-content: center;
-    height: 1px;
-  }
+.accordion {
+  margin-top: 40px;
+  display: block;
+  grid-area: acor;
+  width: 100%;
 
-  .logo img {
-    height: 80px;
-  }
+}
+
+.accordion-body {
+  width: auto;
+  height: auto;
+  display: flex;
+  color: black;
+  margin: auto;
+  padding: 6%;
+}
+
+.accordion-body ul li a{
+  color: white;
+  padding: 0;
+  font-size: 3rem;
+}
+
+.accordion-body ul li {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+}
+
+.accordion-button {
+  -webkit-animation: color-change-2x 2s linear infinite alternate both !important;
+  animation: color-change-2x 2s linear infinite alternate both !important;
+}
+
+#collapseOne {
+  background-color: #ff7600;
+  
+}
+
+
+
+.pmenu {
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  color: black;
+  -webkit-animation: color-change-2x 2s linear infinite alternate both;
+  animation: color-change-2x 2s linear infinite alternate both;
+
+}
 
   .redes2 {
     display: flex;
@@ -1474,56 +1597,85 @@ textarea {
 
 @media (min-width: 769px) and (max-width: 992px) {
   .menu {
+    height: auto;
     display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 100px 300px;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
       "social social"
       "logoC logoC"
-      "naV naV";
+      "acor acor";
   }
 
-  .welcome,
-  .h1h2 {
-    display: flexbox;
-    justify-content: center;
-    text-align: center;
+  .listaGrande {
+    display: none;
   }
 
-  .welcome p {
-    font-size: 3rem;
-  }
-  .logo {
-    justify-content: center;
-    height: 20px;
-    margin-top: 10px;
-  }
+.accordion {
+  margin-top: 40px;
+  display: block;
+  grid-area: acor;
+  width: 100%;
 
-  .logo img {
-    height: 120px;
-  }
+}
+
+.accordion-body {
+  width: auto;
+  height: auto;
+  display: flex;
+  color: black;
+  margin: auto;
+  padding: 6%;
+}
+
+.accordion-body ul li a{
+  color: white;
+  padding: 0;
+  font-size: 3rem;
+}
+
+.accordion-body ul li {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+}
+
+.accordion-button {
+  -webkit-animation: color-change-2x 2s linear infinite alternate both !important;
+  animation: color-change-2x 2s linear infinite alternate both !important;
+}
+
+#collapseOne {
+  background-color: #ff7600;
+  
+}
+
+
+
+.pmenu {
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  color: black;
+  -webkit-animation: color-change-2x 2s linear infinite alternate both;
+  animation: color-change-2x 2s linear infinite alternate both;
+
+}
 
   .redes2 {
-    display: flex;
-    justify-content: center;
+    margin: 5px auto 50px auto;
   }
 
-  .listaNav ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    font-size: 8rem;
+  .logo {
+    height: 100px;
   }
 
   .listaNav li {
-    padding: 1px;
-  }
-
-  .h1h2 h2 {
-    margin-right: 60px;
+    margin: auto;
+    margin-top: 80px;
+    font-size: 3.2rem;
   }
 
   #slider6,
@@ -1650,18 +1802,72 @@ textarea {
 
 @media (min-width: 993px) and (max-width: 1200px) {
   .menu {
-    height: 300px;
+    height: auto;
     display: grid;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 115px 50px auto;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-      "social social social"
-      "logoC logoC logoC"
-      "naV naV naV";
+      "social social"
+      "logoC logoC"
+      "acor acor";
   }
+
+  .listaGrande {
+    display: none;
+  }
+
+.accordion {
+  margin-top: 20px;
+  display: block;
+  grid-area: acor;
+  width: 100%;
+
+}
+
+.accordion-body {
+  width: auto;
+  height: auto;
+  display: flex;
+  color: black;
+  margin: auto;
+  padding: 4%;
+}
+
+.accordion-body ul li a{
+  color: white;
+  padding: 0;
+  font-size: 3rem;
+}
+
+.accordion-body ul li {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+}
+
+.accordion-button {
+  -webkit-animation: color-change-2x 2s linear infinite alternate both !important;
+  animation: color-change-2x 2s linear infinite alternate both !important;
+}
+
+#collapseOne {
+  background-color: #ff7600;
+  
+}
+
+
+
+.pmenu {
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  color: black;
+  -webkit-animation: color-change-2x 2s linear infinite alternate both;
+  animation: color-change-2x 2s linear infinite alternate both;
+
+}
 
   .redes2 {
     margin: 5px auto 50px auto;
@@ -1813,18 +2019,74 @@ textarea {
 
 @media (min-width: 1201px) and (max-width: 1400px) {
   .menu {
-    height: 400px;
+    height: auto;
     display: grid;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 115px 50px auto;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-      "social social social"
-      "logoC logoC logoC"
-      "naV naV naV";
+      "social social"
+      "logoC logoC"
+      "acor acor";
   }
+
+  .listaGrande {
+    display: none;
+  }
+
+.accordion {
+  margin-top: 20px;
+  display: block;
+  grid-area: acor;
+  width: 100%;
+
+}
+
+.accordion-body {
+  width: auto;
+  height: auto;
+  display: flex;
+  color: black;
+  margin: auto;
+  padding: 4%;
+}
+
+.accordion-body ul li a{
+  color: white;
+  padding: 0;
+  font-size: 3rem;
+}
+
+.accordion-body ul li {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+}
+
+.accordion-button {
+  -webkit-animation: color-change-2x 2s linear infinite alternate both !important;
+  animation: color-change-2x 2s linear infinite alternate both !important;
+}
+
+#collapseOne {
+  background-color: #ff7600;
+  
+}
+
+
+
+.pmenu {
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  color: black;
+  -webkit-animation: color-change-2x 2s linear infinite alternate both;
+  animation: color-change-2x 2s linear infinite alternate both;
+
+}
+
+
 
   .redes2 {
     margin: 5px auto 50px auto;
@@ -1847,6 +2109,7 @@ textarea {
     margin-top: 120px;
     font-size: 4.5rem;
   }
+
 
   .container ul {
     width: 100%;
