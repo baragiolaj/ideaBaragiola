@@ -1388,8 +1388,9 @@ textarea {
   }
 }
 
-@media (min-width: 577px) and (max-width: 768px) {
+@media (min-width: 350px) and (max-width: 768px) {
   .menu {
+    width: 100%;
     height: auto;
     display: grid;
     grid-template-columns: 2fr 2fr;
@@ -1418,7 +1419,7 @@ textarea {
   display: flex;
   color: black;
   margin: auto;
-  padding: 6%;
+  padding: 10%;
 }
 
 .accordion-body ul li a{
@@ -1448,7 +1449,7 @@ textarea {
 
 .pmenu {
   width: 100%;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   font-family: "Anton", sans-serif;
   color: black;
@@ -1460,6 +1461,12 @@ textarea {
   .redes2 {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .redes2 a img {
+    width: 30%;
   }
 
   .listaNav ul {
@@ -1472,6 +1479,14 @@ textarea {
 
   .listaNav li {
     padding: 1px;
+  }
+
+  .logo a img{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: -40px;
+    width: 100%;
+    justify-content: center;
   }
 
   #slider6,
@@ -1564,6 +1579,10 @@ textarea {
     margin: auto;
   }
 
+  .sm a {
+    font-size: 2rem;
+  }
+
   .footerList {
     grid-area: info;
   }
@@ -1581,7 +1600,8 @@ textarea {
   }
 
   .form form {
-    margin: auto;
+    
+    width: 100%;
   }
 
   .footerList {
